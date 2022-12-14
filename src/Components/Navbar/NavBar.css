@@ -1,3 +1,27 @@
-.nav-link-color{
+.navbar{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.navbar__menu{
+    text-decoration: none;
     color: black;
+}
+
+.nav__logo{
+    margin-right: 2rem;
+    font-size: 25px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar a:hover{
+    color: white;
 }

@@ -1,8 +1,17 @@
 .products-container{
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     background-color: aliceblue;
     margin-top: 3rem;
+    gap: 2rem;
 }
 
+.products-container a{
+    text-decoration: none;
+    color: black;
+}
+
+.products-container a:hover{
+    text-decoration: none;
+    color: orange;
+}

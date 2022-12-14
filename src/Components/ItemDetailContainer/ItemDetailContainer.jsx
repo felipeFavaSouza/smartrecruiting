@@ -1,10 +1,10 @@
-import { productos } from "../../mock";
+import ItemDetail from "../ItemDetail/ItemDetail"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import './ItemListContainer.css'
-import Item from "../Item/Item";
+import { productos } from "../../mock";
+import './ItemDetailContainer.css';
 
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
     const [item, setItem] = useState(productos);
     const {id} = useParams();
 
@@ -12,7 +12,7 @@ const ItemListContainer = () => {
         
         if(id){
             setTimeout(()=>{
-                const newProducto = productos.filter((p)=> p.category == id)
+                const newProducto = productos.filter((p)=> p.id == id)
                 resolve(newProducto);
             },1000)
         } else {
@@ -28,14 +28,14 @@ const ItemListContainer = () => {
     },[id])
 
     return (
-        <div className="products-container">
-            {
-                item.map((producto)=>{
-                    return <Item producto={producto}/>
-                })
-            }
-        </div>
+        <div className="itemDetail__container">
+        {
+            item.map((producto)=>{
+                return <ItemDetail producto={producto}/>
+            })
+        }
+    </div>
     )
 }
 
-export default ItemListContainer;
+export default ItemDetailContainer;

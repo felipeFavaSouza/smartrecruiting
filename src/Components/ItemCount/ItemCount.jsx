@@ -5,9 +5,8 @@ function ItemCount(props) {
     const [count, setCount] = useState(1);
   
     return (
-      <div className="container">
-        <div className="counter">
-          <div className="counter-inner-container">
+        <div>
+          <div className="counter-container">
             <button
               className="counter-btn"
               onClick={() =>
@@ -26,7 +25,6 @@ function ItemCount(props) {
           </div>
           <button className="agregar-carrito">Agregar al Carrito</button>
         </div>
-      </div>
     );
   }
   

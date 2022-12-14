@@ -1,52 +1,28 @@
-.container {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .counter {
-    border: 1px solid grey;
-    border-radius: 5px 5px 5px 5px;
-    width: 300px;
-    height: 90px;
-    background-color: #f6f6f8;
-  }
-  
-  .counter-inner-container {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid grey;
-    border-radius: 5px 5px 5px 5px;
-    margin: auto;
-    width: 200px;
-    padding: 3px;
-    background-color: white;
-  }
-  
-  .counter-btn {
-    color: rgb(5, 30, 140);
-    border: none;
-    background-color: white;
-    font-size: 20px;
-  }
-  
-  span {
-    font-size: 20px;
-  }
-  
-  .agregar-carrito {
-    margin-top: 5px;
-    margin-left: 50px;
-    border: 1px solid #4b91fb;
-    color: #4b91fb;
-    background-color: white;
-    width: 200px;
-    height: 40px;
-  }
-  
-  .agregar-carrito:hover {
-    background-color: lightcyan;
-  }
-  
-  p {
-    margin-left: 1rem;
-  }
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-btn{
+  margin-top: 1rem;
+  background-color: aquamarine;
+  border: 1px solid black;
+  width: 32px;
+  font-size: 16px;
+}
+
+.countNum {
+  font-size: 16px;
+  margin-left: 1rem;
+  background-color: white;
+  padding: 2px 8px 2px 8px;
+  border: 1px solid black;
+}
+
+.agregar-carrito {
+  background-color: aquamarine;
+  width: 150px;
+  margin-left: 3.5rem;
+  padding: 8px;
+}

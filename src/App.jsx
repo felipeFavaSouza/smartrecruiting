@@ -2,22 +2,19 @@ import NavBar from "./Components/Navbar/NavBar";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contacto from "./pages/Contacto/Contacto";
-import Sobre from "./pages/Sobre/Sobre";
-import Laptops from "./pages/Laptops/Laptops";
-import Swag from "./pages/Swag/Swag";
-import Merchandising from "./pages/Merchandising/Merchandising";
+import {categorias, menus} from './mock'
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 
 const App = () => {
+
     return (
         <BrowserRouter>
-            <NavBar />
+            <NavBar menus={menus} categorias={categorias} />
             <Routes>
                 <Route exact path="/" element={<ItemListContainer/>}/>
+                <Route exact path="/category/:id" element={<ItemListContainer/>}/>
+                <Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
                 <Route exact path="/contacto" element={<Contacto/>}/>
-                <Route exact path="/sobre" element={<Sobre/>}/>
-                <Route exact path="/productos/1" element={<Laptops/>}/>
-                <Route exact path="/productos/2" element={<Swag/>}/>
-                <Route exact path="/productos/3" element={<Merchandising/>}/>
             </Routes>
         </BrowserRouter>
     )

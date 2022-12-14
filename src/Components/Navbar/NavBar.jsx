@@ -1,35 +1,23 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import CartWidget from '../CartWidget/CartWidget';
-import { categorias } from '../../mock';
+import { Link } from 'react-router-dom';
 import './NavBar.css'
+import CartWidget from '../CartWidget/CartWidget'
 
-function NavBar() {
+function NavBar({menus, categorias}) {
   return (
-    <>
-    <Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
-      <Container>
-        <Navbar.Brand href="/">SmartRecruit 👨🏽‍💻</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/sobre" className='nav-link-color'>Sobre</Nav.Link>
-            <NavDropdown title="Productos" className='nav-link-color' id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/productos/1">Laptops</NavDropdown.Item>
-              <NavDropdown.Item href="/productos/2">
-                Kits SWAG
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/productos/3">Merchandising</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="/contacto" className='nav-link-color'>Contacto</Nav.Link>
-          </Nav>
-          <CartWidget/>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-    </>
+      <div className='navbar'>
+         <a href="/"><h1 className='nav__logo'>SmartRecruit 👨🏽‍💻</h1></a>
+        {
+          menus.map((menu)=> {
+            return <Link className='navbar__menu' to={menu.href}>{menu.name}</Link>
+          })
+        }
+        {
+          categorias.map((categoria)=>{
+            return <Link className='navbar__menu' to={`/category/${categoria.id}`}>{categoria.name}</Link>
+          })
+        }
+        <CartWidget/>
+      </div>
   );
 }
 
