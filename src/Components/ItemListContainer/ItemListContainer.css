@@ -1,8 +1,9 @@
 .products-container{
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
     background-color: aliceblue;
-    margin-top: 3rem;
+    margin: 3rem 2rem;
     gap: 2rem;
 }
 

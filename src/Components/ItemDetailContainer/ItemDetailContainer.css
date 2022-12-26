@@ -1,6 +1,8 @@
 .itemDetail__container {
+    display: flex;
     background-color: aliceblue;
     width: 250px;
     margin: 2rem;
     padding: 2rem;
+    
 }

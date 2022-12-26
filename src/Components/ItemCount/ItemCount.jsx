@@ -1,16 +1,16 @@
 import './ItemCount.css'
 import { useState } from 'react'
 
-function ItemCount(props) {
+function ItemCount({stock, onAdd}) {
     const [count, setCount] = useState(1);
-  
+
     return (
         <div>
           <div className="counter-container">
             <button
               className="counter-btn"
               onClick={() =>
-                count < props.stock ? setCount(count + 1) : setCount(count)
+                count < stock ? setCount(count + 1) : setCount(count)
               }
             >
               +
@@ -23,7 +23,7 @@ function ItemCount(props) {
               -
             </button>
           </div>
-          <button className="agregar-carrito">Agregar al Carrito</button>
+          <button className="agregar-carrito" onClick={()=> onAdd(count)}>Agregar al Carrito</button>
         </div>
     );
   }

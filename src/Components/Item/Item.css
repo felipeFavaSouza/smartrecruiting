@@ -1,5 +1,11 @@
 .detalle__btn {
     background-color: aquamarine;
-    color: black;
+    color: rgb(0, 0, 0);
     height: 25px;
+    border-radius: 20px 20px;
+}
+
+.products {
+    margin-top: 1rem;
+    text-align: center;
 }

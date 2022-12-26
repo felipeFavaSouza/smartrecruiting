@@ -3,6 +3,7 @@ import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 
 function NavBar({menus, categorias}) {
+
   return (
       <div className='navbar'>
          <a href="/"><h1 className='nav__logo'>SmartRecruit 👨🏽‍💻</h1></a>
@@ -16,7 +17,8 @@ function NavBar({menus, categorias}) {
             return <Link className='navbar__menu' to={`/category/${categoria.id}`}>{categoria.name}</Link>
           })
         }
-        <CartWidget/>
+
+        <Link to={"/cart"}><CartWidget/></Link>
       </div>
   );
 }
