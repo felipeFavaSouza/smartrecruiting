@@ -15,16 +15,15 @@ En el caso de que haya stock, se confirmará la compra y sera direccionado a un 
 
 ### 2. Tecnologias utilizadas
 
-|Front End|
-|--|--|
-|React|
-|Firebase|
-|CSS
 
-|NPM Packages|
-|--|--|
-|sweetAlerts|
-|Formik|
+ **FrontEnd**
+- React
+- Firebase
+- CSS
+
+**NPM Packages**
+- sweetAlerts 
+- Formik
 
 [SweetAlerts](https://sweetalert2.github.io/): Se utilizó ésta dependencia para notificar al usuario de los diferentes eventos de la interfaz, tales como informar de errores, y permitir al usuario cargar sus datos para realizar un pedido.
 [Formik](https://formik.org/): Utilice Formik para crear un formulario en React y manipular los datos del mismo.
