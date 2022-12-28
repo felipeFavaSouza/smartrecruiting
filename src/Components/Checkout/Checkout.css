@@ -33,6 +33,11 @@ form {
     height: 32px;
     background-color: aquamarine;
     border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: azure;
 }
 
 .products-brief-container {

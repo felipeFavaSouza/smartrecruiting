@@ -8,6 +8,7 @@ import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 import Cart from "./Components/Cart/Cart";
 import CartProvider from "./context/CartContext";
 import Checkout from "./Components/Checkout/Checkout";
+import { OrderStatus } from "./Components/OrderStatus/OrderStatus";
 
 const menus = [{
     name:'Home',
@@ -37,6 +38,7 @@ const App = () => {
                     <Route exact path="/item/:detalleId" element={<ItemDetailContainer/>}/>
                     <Route exact path="/cart" element={<Cart/>}/>
                     <Route exact path="/checkout" element={<Checkout/>}/>
+                    <Route path="/order/:orderId" element={<OrderStatus />} />
                 </Routes>
             </CartProvider>
         </BrowserRouter>

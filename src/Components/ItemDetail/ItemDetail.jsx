@@ -11,7 +11,7 @@ const ItemDetail = ({producto}) => {
 
     const onAdd = (quantity) => {
         setGoToCart(true);
-        addProduct(producto, quantity)
+        addProduct(producto, quantity);
     }
 
     const closingButtons = () => {

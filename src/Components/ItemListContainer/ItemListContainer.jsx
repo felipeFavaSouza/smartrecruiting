@@ -1,4 +1,5 @@
-import { getDocs, getFirestore, collection} from 'firebase/firestore'
+import { getDocs, collection} from 'firebase/firestore'
+import { db } from '../../services/firebase/firebaseconfig';
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import './ItemListContainer.css'
@@ -26,7 +27,6 @@ const ItemListContainer = () => {
     },[id])
 
     useEffect(()=>{
-        const db = getFirestore();
         const itemCollection = collection(db, "item");
 
         getDocs(itemCollection).then((result) =>{
