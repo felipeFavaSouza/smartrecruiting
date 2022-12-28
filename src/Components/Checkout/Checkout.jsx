@@ -114,10 +114,6 @@ const Checkout = () => {
         } catch (error) {
             console.error(error);
         }
-        // const db = getFirestore();
-        // const ordersCollection = collection(db, 'orders');
-
-        // addDoc(ordersCollection, formData)
     }
     const afterBuy = (orderId) => {
         MySwal.fire({
@@ -138,29 +134,7 @@ return <div className="checkout-container">
         <div>
             <h1>Checkout</h1>
         </div>
-        {/* <form onSubmit={execSendOrder}>
-            <div>
-                <label htmlFor="nombre">Nombre:</label>
-                <input className="checkout-form-input" type="text" name="nombre" id="nombre" required onChange={updateFormData}/>
-            </div>
-            <div>
-                <label htmlFor="apellido">Apellido:</label>
-                <input className="checkout-form-input" type="text" name="apellido" id="apellido" required onChange={updateFormData}/>
-            </div>
-            <div>
-                <label htmlFor="email">Email:</label>
-                <input className="checkout-form-input" type="email" name="email" id="email" required onChange={updateFormData}/>
-            </div>
-            <div>
-                <label htmlFor="telefono">Telefono:</label>
-                <input className="checkout-form-input" type="number" name="telefono" id="email" required onChange={updateFormData}/>
-            </div>
-            <div className="checkout-btn-container">
-                <button className="checkout-btn" type="submit">Enviar</button>
-                <button className="checkout-btn" type="reset">Borrar</button>
-            </div>
-        </form> */}
-        <button onClick={handleBuy}>Confirmar Orden</button>
+        <button onClick={handleBuy} className='confirmar-orden-btn'>Confirmar Orden</button>
         <div>
             <p className="checkout-total">{`Total: $${totalPrice()}`}</p>
         </div>

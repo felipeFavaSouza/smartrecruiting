@@ -7,9 +7,8 @@
     background-color: aliceblue;
 }
 
-form {
-    margin: 2rem;
-    width: 50%;
+.checkout-form {
+    margin: 3rem 3rem;
 }
 
 .checkout-form-input {
@@ -67,4 +66,14 @@ form {
 .checkout-total {
     font-size: 24px;
     color: green;
+}
+
+.confirmar-orden-btn {
+    border-radius: 5px 5px;
+    width: 150px;
+    height: 48px;
+    font-size: 16px;
+    background-color: aquamarine;
+    border: 1px solid lightgray;
+    cursor: pointer;
 }

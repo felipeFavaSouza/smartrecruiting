@@ -1,6 +1,6 @@
 import React from "react";
 import {Formik, Form, Field} from 'formik';
-import '/Users/felipe/Documents/Cursos/Coderhouse/react/smartrecruit/src/Components/Checkout/Checkout.css'
+import '../Checkout/Checkout.css'
 
 
 export const CartForm = ({onSubmit}) => {
@@ -17,7 +17,7 @@ export const CartForm = ({onSubmit}) => {
             }
             return errors;
           }} onSubmit={onSubmit}>
-            <Form>
+            <Form className="checkout-form">
                 <div>
                     <Field type='text' name='firstName' placeholder='Nombre' className='checkout-form-input'/>
                 </div>
